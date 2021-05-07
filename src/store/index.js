@@ -9,14 +9,21 @@ Vue.use(Vuex);
 export default new Vuex.Store({
   state: {
     recipes: [],
+    recipe: {},
   },
   mutations: {
+    // 全部のレシピデータがさっと持ってくる・RecipeList.vueで利用
     SET_RECIPES(state, recipes) {
       state.recipes = recipes;
     },
+    // 個別にレシピデータもってくる・RecipeDetail.vueで利用
+    SET_RECIPE(state, recipe) {
+      state.recipe = recipe;
+    },
   },
   actions: {
-    fetchReipes({ commit }) {
+    // 全部のレシピデータがさっと持ってくる・RecipeList.vueで利用
+    fetchRecipes({ commit }) {
       RecipeService.getRecipes()
         .then((response) => {
           commit("SET_RECIPES", response.data);
@@ -24,6 +31,29 @@ export default new Vuex.Store({
         .catch((error) => {
           console.log("There was an error: " + error.response);
         });
+    },
+    // 個別にレシピデータもってくる・RecipeDetail.vueで利用
+    fetchRecipe({ commit, getters }, id) {
+      // send in the getters
+      var recipe = getters.getRecipeById;
+      if (recipe) {
+        commit("SET_RECIPE", recipe); // すでにrecipesが取得されている場合は、getters経由でrecipeのデータ取得
+      } else {
+        RecipeService.getRecipe(id)
+          .then((response) => {
+            commit("SET_RECIPE", response.data);
+          })
+          .catch((error) => {
+            console.log(
+              "EventService.getRecipe does not work: " + error.response
+            );
+          });
+      }
+    },
+  },
+  getters: {
+    getRecipeById: (state) => (id) => {
+      return state.recipes.find((recipe) => recipe.id === id);
     },
   },
   modules: {},
