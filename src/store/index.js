@@ -16,7 +16,7 @@ export default new Vuex.Store({
     },
   },
   actions: {
-    fetchRecipes({ commit }) {
+    fetchReipes({ commit }) {
       RecipeService.getRecipes()
         .then((response) => {
           commit("SET_RECIPES", response.data);
