@@ -24,7 +24,7 @@
         },
         {
         "id": 2,
-        "title": "chichen curry",
+        "title": "chipen curry",
         "ingredients": ["たまねぎ", "にんじん", "鶏肉", "大根", "トマト缶"],
         "processes": [
             {
@@ -46,7 +46,7 @@
         },
         {
         "id": 3,
-        "title": "chichen curry",
+        "title": "chipon curry",
         "ingredients": ["たまねぎ", "にんじん", "鶏肉", "大根", "トマト缶"],
         "processes": [
             {
@@ -90,7 +90,7 @@
         },
         {
         "id": 5,
-        "title": "chichen curry",
+        "title": "chin curry",
         "ingredients": ["たまねぎ", "にんじん", "鶏肉", "大根", "トマト缶"],
         "processes": [
             {

@@ -26,6 +26,7 @@ export default new Vuex.Store({
     fetchRecipes({ commit }) {
       RecipeService.getRecipes()
         .then((response) => {
+          console.log("fetchRecipes()");
           commit("SET_RECIPES", response.data);
         })
         .catch((error) => {
@@ -35,12 +36,15 @@ export default new Vuex.Store({
     // 個別にレシピデータもってくる・RecipeDetail.vueで利用
     fetchRecipe({ commit, getters }, id) {
       // send in the getters
-      var recipe = getters.getRecipeById;
+      let recipe = getters.getRecipeById(id);
+      console.log("via getters recipe", recipe);
       if (recipe) {
         commit("SET_RECIPE", recipe); // すでにrecipesが取得されている場合は、getters経由でrecipeのデータ取得
       } else {
+        console.log("theres no recipes. lets get recipe from axios by id", id);
         RecipeService.getRecipe(id)
           .then((response) => {
+            console.log("response.data", response.data);
             commit("SET_RECIPE", response.data);
           })
           .catch((error) => {

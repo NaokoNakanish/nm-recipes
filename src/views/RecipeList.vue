@@ -14,7 +14,6 @@ export default {
     RecipeCard,
   },
   computed: { ...mapState(["recipes"]) },
-  methods: {},
   created() {
     this.$store.dispatch("fetchRecipes"); // db.jsonのデータをrecipesへ格納させるアクションを呼び出す
   },
