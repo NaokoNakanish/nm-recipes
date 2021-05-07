@@ -1,0 +1,114 @@
+{
+    "recipes": [
+        {
+        "id": 1,
+        "title": "chichen curry",
+        "ingredients": ["たまねぎ", "にんじん", "鶏肉", "大根", "トマト缶"],
+        "processes": [
+            {
+                "order": 1,
+                "do": "スパイスをジャーってやって、収まったら野菜とか肉とか炒める"
+            },
+            {
+                "order": 2,
+                "do": "トマト缶とちょっと水を入れて煮込む"
+            },
+            {
+                "order": 3,
+                "do": "ガラムマサラや塩などで味を調節する"
+            }
+        ],
+        "editDate": 20201112,
+        "editor": "minoru",
+        "category": "Chinese"
+        },
+        {
+        "id": 2,
+        "title": "chichen curry",
+        "ingredients": ["たまねぎ", "にんじん", "鶏肉", "大根", "トマト缶"],
+        "processes": [
+            {
+                "order": 1,
+                "do": "スパイスをジャーってやって、収まったら野菜とか肉とか炒める"
+            },
+            {
+                "order": 2,
+                "do": "トマト缶とちょっと水を入れて煮込む"
+            },
+            {
+                "order": 3,
+                    "do": "ガラムマサラや塩などで味を調節する"
+            }
+        ],
+        "editDate": 20201112,
+        "editor": "minoru",
+        "category": "Chinese"
+        },
+        {
+        "id": 3,
+        "title": "chichen curry",
+        "ingredients": ["たまねぎ", "にんじん", "鶏肉", "大根", "トマト缶"],
+        "processes": [
+            {
+                "order": 1,
+                "do": "スパイスをジャーってやって、収まったら野菜とか肉とか炒める"
+            },
+            {
+                "order": 2,
+                "do": "トマト缶とちょっと水を入れて煮込む"
+            },
+            {
+                "order": 3,
+                "do": "ガラムマサラや塩などで味を調節する"
+            }
+        ],
+        "editDate": 20201112,
+        "editor": "minoru",
+        "category": "Chinese"
+        },
+        {
+        "id": 4,
+        "title": "chichen curry",
+        "ingredients": ["たまねぎ", "にんじん", "鶏肉", "大根", "トマト缶"],
+        "processes": [
+            {
+                "order": 1,
+                "do": "スパイスをジャーってやって、収まったら野菜とか肉とか炒める"
+            },
+            {
+                "order": 2,
+                "do": "トマト缶とちょっと水を入れて煮込む"
+            },
+            {
+                "order": 3,
+                "do": "ガラムマサラや塩などで味を調節する"
+            }
+        ],
+        "editDate": 20201112,
+        "editor": "minoru",
+        "category": "Chinese"
+        },
+        {
+        "id": 5,
+        "title": "chichen curry",
+        "ingredients": ["たまねぎ", "にんじん", "鶏肉", "大根", "トマト缶"],
+        "processes": [
+            {
+                "order": 1,
+                "do": "スパイスをジャーってやって、収まったら野菜とか肉とか炒める"
+            },
+            {
+                "order": 2,
+                "do": "トマト缶とちょっと水を入れて煮込む"
+            },
+            {
+                "order": 3,
+                "do": "ガラムマサラや塩などで味を調節する"
+            }
+        ],
+        "editDate": 20201112,
+        "editor": "minoru",
+        "category": "Chinese"
+        }
+    ]
+}

@@ -5,6 +5,7 @@ import store from "./store";
 
 Vue.config.productionTip = false;
 
+// vuex default setting
 new Vue({
   router,
   store,
