@@ -1,9 +1,14 @@
 <template>
   <div class="recipe-card">
-    <h1>{{ recipe.title }}</h1>
+    <img
+      class="dish-photo"
+      src="PXL_20210327_051520012.jpg"
+      alt="curry photo"
+    />
+    <h2>{{ recipe.title }}</h2>
     <p>Updated: {{ recipe.editDate }} by {{ recipe.editor }}</p>
     <router-link :to="{ name: 'RecipeDetail', params: { id: recipe.id } }"
-      >See detail</router-link
+      >>See detail</router-link
     >
   </div>
 </template>
@@ -17,12 +22,17 @@ export default {
 <style scoped>
 .recipe-card {
   /* 枠 */
-  padding: 50px;
-  margin-bottom: 24px;
-  border: 1px dotted #333333;
+  padding: 0.5em;
+  margin-bottom: 1em;
   transition: all 0.2s linear;
   cursor: pointer;
   /* 文字配置 */
   text-align: left;
+}
+.dish-photo {
+  border-radius: 10px;
+  height: 300px;
+  padding: 5px;
+  float: left;
 }
 </style>
