@@ -1,8 +1,8 @@
 <template>
-  <div>
+  <span>
     <h1>nm recipes</h1>
     <RecipeCard v-for="recipe in recipes" :key="recipe.id" :recipe="recipe" />
-  </div>
+  </span>
 </template>
 
 <script>

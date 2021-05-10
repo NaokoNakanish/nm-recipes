@@ -1,5 +1,5 @@
 <template>
-  <div class="recipe-card">
+  <section class="recipe-card">
     <!-- <div class="cotainer"></div> -->
     <span class="recipe-photo">
       <img src="PXL_20210327_051520012.jpg" alt="curry photo" />
@@ -11,7 +11,7 @@
         >>See detail</router-link
       >
     </span>
-  </div>
+  </section>
 </template>
 
 <script>
@@ -24,7 +24,7 @@ export default {
 .recipe-card {
   /* 枠 */
   height: 250px;
-  padding: 0.5em;
+  /* padding: 0.5em; */
   margin-bottom: 1em;
   transition: all 0.2s linear;
   cursor: pointer;
