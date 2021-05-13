@@ -1,8 +1,12 @@
 <template>
-  <span>
-    <h1>nm recipes</h1>
-    <RecipeCard v-for="recipe in recipes" :key="recipe.id" :recipe="recipe" />
-  </span>
+  <section>
+    <div class="page-title">
+      <h1>nm recipes</h1>
+    </div>
+    <div class="recipe-list">
+      <RecipeCard v-for="recipe in recipes" :key="recipe.id" :recipe="recipe" />
+    </div>
+  </section>
 </template>
 
 <script>
@@ -19,3 +23,14 @@ export default {
   },
 };
 </script>
+
+<style scoped>
+.page-title {
+  width: 100%;
+}
+/* flexboxを有効に */
+.recipe-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+</style>
