@@ -1,16 +1,23 @@
 <template>
   <section class="recipe-card">
     <!-- <div class="cotainer"></div> -->
-    <span class="recipe-photo">
-      <img src="PXL_20210327_051520012.jpg" alt="curry photo" />
-    </span>
-    <span class="recipe-info">
-      <h2>{{ recipe.title }}</h2>
-      <p>Updated: {{ recipe.editDate }} by {{ recipe.editor }}</p>
-      <router-link :to="{ name: 'RecipeDetail', params: { id: recipe.id } }"
+    <div class="recipe-photo">
+      <router-link :to="{ name: 'RecipeDetail', params: { id: recipe.id } }">
+        <img src="PXL_20210327_051520012.jpg" alt="curry photo" />
+      </router-link>
+    </div>
+    <div>
+      <span class="recipe-info">
+        <h2>{{ recipe.title }}</h2>
+        <p>Updated: {{ recipe.editDate }} by {{ recipe.editor }}</p>
+      </span>
+      <div class="recipe-category">
+        <p>{{ recipe.category }}</p>
+      </div>
+      <!-- <router-link :to="{ name: 'RecipeDetail', params: { id: recipe.id } }"
         >>See detail</router-link
-      >
-    </span>
+      > -->
+    </div>
   </section>
 </template>
 
@@ -22,8 +29,11 @@ export default {
 
 <style scoped>
 .recipe-card {
-  /* 枠 */
+  /* レシピカード１枚分のエリアの設定 */
   height: 250px;
+  width: 800px;
+  display: flex;
+  flex-wrap: nowrap;
   /* padding: 0.5em; */
   margin-bottom: 1em;
   transition: all 0.2s linear;
@@ -32,18 +42,28 @@ export default {
   text-align: left;
 }
 .recipe-info {
+  /* 文字表示エリアの設定 */
   height: 250px;
   width: 400px;
+  margin-block: 1em;
 }
 .recipe-photo {
+  /* 写真表示エリアの設定 */
   border-radius: 3px;
   padding: 5px;
   height: 250px;
-  width: 500px;
+  width: 470px;
   float: left;
 }
-img {
-  height: 250px;
-  float: center;
+.recipe-category {
+  /* カテゴリエリアの設定 */
+  height: 20px;
+  width: 70px;
+  margin-block: 1em;
+  border-radius: 3px;
+  font-size: 15px;
+  text-align: center;
+  background-color: #49a994;
+  color: white;
 }
 </style>
