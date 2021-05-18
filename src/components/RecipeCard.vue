@@ -3,7 +3,7 @@
     <!-- <div class="cotainer"></div> -->
     <div class="recipe-photo">
       <router-link :to="{ name: 'RecipeDetail', params: { id: recipe.id } }">
-        <img src="PXL_20210327_051520012.jpg" alt="curry photo" />
+        <img src="@/assets/PXL_20210327_051520012.jpg" alt="curry photo" />
       </router-link>
     </div>
     <div>

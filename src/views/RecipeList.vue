@@ -1,12 +1,12 @@
 <template>
-  <section>
+  <b-container fluid>
     <div class="page-title">
       <h1>nm recipes</h1>
     </div>
     <div class="recipe-list">
       <RecipeCard v-for="recipe in recipes" :key="recipe.id" :recipe="recipe" />
     </div>
-  </section>
+  </b-container>
 </template>
 
 <script>

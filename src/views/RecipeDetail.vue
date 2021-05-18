@@ -1,10 +1,12 @@
 <template>
   <div>
     <h1>#{{ recipe.id }} {{ recipe.title }}</h1>
+    <img src="@/assets/PXL_20210327_051520012.jpg" alt="curry photo" />
+
     <h2>ingredient🍅</h2>
     <ul>
       <li v-for="ingredient in recipe.ingredients" :key="ingredient">
-        {{ ingredient }}
+        {{ ingredient.ingredient }} ....{{ ingredient.quantity }}
       </li>
     </ul>
     <h2>How to Make🍳</h2>
@@ -27,3 +29,5 @@ export default {
   computed: { ...mapState(["recipe"]) },
 };
 </script>
+
+<style scoped></style>

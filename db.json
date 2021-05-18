@@ -3,7 +3,28 @@
         {
         "id": 1,
         "title": "chichen curry",
-        "ingredients": ["たまねぎ", "にんじん", "鶏肉", "大根", "トマト缶"],
+        "ingredients": [
+            {
+            "ingredient": "玉ねぎ",
+            "quantity": "3個"
+            },
+            {
+            "ingredient": "にんじん",
+            "quantity": "2本"
+            },
+            {
+            "ingredient": "鶏もも肉",
+            "quantity": "2枚"
+            },
+            {
+            "ingredient": "大根",
+            "quantity": "1/3本"
+            },
+            {
+            "ingredient": "トマト缶",
+            "quantity": "半分"
+            }
+        ],
         "processes": [
             {
                 "order": 1,
@@ -47,7 +68,28 @@
         {
         "id": 3,
         "title": "chipon curry",
-        "ingredients": ["たまねぎ", "にんじん", "鶏肉", "大根", "トマト缶"],
+        "ingredients":[
+            {
+            "ingredient": "玉ねぎ",
+            "quantity": "3個"
+            },
+            {
+            "ingredient": "にんじん",
+            "quantity": "2本"
+            },
+            {
+            "ingredient": "鶏もも肉",
+            "quantity": "2枚"
+            },
+            {
+            "ingredient": "大根",
+            "quantity": "1/3本"
+            },
+            {
+            "ingredient": "トマト缶",
+            "quantity": "半分"
+            }
+        ],
         "processes": [
             {
                 "order": 1,
@@ -69,7 +111,28 @@
         {
         "id": 4,
         "title": "chichen curry",
-        "ingredients": ["たまねぎ", "にんじん", "鶏肉", "大根", "トマト缶"],
+        "ingredients": [
+            {
+            "ingredient": "玉ねぎ",
+            "quantity": "3個"
+            },
+            {
+            "ingredient": "にんじん",
+            "quantity": "2本"
+            },
+            {
+            "ingredient": "鶏もも肉",
+            "quantity": "2枚"
+            },
+            {
+            "ingredient": "大根",
+            "quantity": "1/3本"
+            },
+            {
+            "ingredient": "トマト缶",
+            "quantity": "半分"
+            }
+        ],
         "processes": [
             {
                 "order": 1,
@@ -91,7 +154,28 @@
         {
         "id": 5,
         "title": "chin curry",
-        "ingredients": ["たまねぎ", "にんじん", "鶏肉", "大根", "トマト缶"],
+        "ingredients": [
+            {
+            "ingredient": "玉ねぎ",
+            "quantity": "3個"
+            },
+            {
+            "ingredient": "にんじん",
+            "quantity": "2本"
+            },
+            {
+            "ingredient": "鶏もも肉",
+            "quantity": "2枚"
+            },
+            {
+            "ingredient": "大根",
+            "quantity": "1/3本"
+            },
+            {
+            "ingredient": "トマト缶",
+            "quantity": "半分"
+            }
+        ],
         "processes": [
             {
                 "order": 1,
