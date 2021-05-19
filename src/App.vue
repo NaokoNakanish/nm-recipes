@@ -60,7 +60,7 @@
   </div>
 </template>
 
-<style>
+<style lang="scss">
 /* link */
 a:visited {
   color: #06231c;
