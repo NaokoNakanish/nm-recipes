@@ -48,3 +48,8 @@ https://css-tricks.com/snippets/css/a-guide-to-flexbox/#flexbox-background
 
 DO NOT install latest version, please install version 4.0.0
 https://stackoverflow.com/questions/64373393/error-rule-can-only-have-one-resource-source-provided-resource-and-test-incl/64468842#64468842?newreg=1531402c6c6643d184a9eac5e01d99d2
+
+### About sass-loader
+
+DO NOT install latest version, please install version 10.1.1
+https://stackoverflow.com/questions/66082397/typeerror-this-getoptions-is-not-a-function
