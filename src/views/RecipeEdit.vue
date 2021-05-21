@@ -32,10 +32,16 @@
       >
         <b-form inline>
           <ol v-for="ingredient in ingredients" :key="ingredient.id">
-            <label>ingredients:</label>
-            <b-form-input id="ingredients"></b-form-input>
-            <label class="quantity" for="ingredients-quantity">quantity:</label>
-            <b-form-input id="quantity"></b-form-input>
+            <b-row>
+              <b-col col lg="9">
+                <label>ingredient:</label>
+                <b-form-input id="ingredient.ingredient" col="8"></b-form-input>
+              </b-col>
+              <b-col col lg="3">
+                <label>quantity:</label>
+                <b-form-input id="ingredient.quantity" col="4"></b-form-input>
+              </b-col>
+            </b-row>
           </ol>
         </b-form>
       </b-form-group>
@@ -59,8 +65,31 @@ export default {
   data() {
     return {
       types: ["id", "title"],
-      ingredients: 3, // 仮置
-      processes: 3, // 仮置
+      ingredients: [
+        {
+          ingredient: "",
+          quantity: "",
+        },
+        {
+          ingredient: "",
+          quantity: "",
+        },
+        {
+          ingredient: "",
+          quantity: "",
+        },
+      ], // 仮置
+      processes: [
+        {
+          process: "",
+        },
+        {
+          process: "",
+        },
+        {
+          process: "",
+        },
+      ], // 仮置
     };
   },
 };
