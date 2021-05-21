@@ -1,6 +1,6 @@
 // Bootstrap使って書いてみよう
 <template>
-  <div>
+  <b-container>
     <h1>RecipeEdit</h1>
     <b-form-group
       label-cols-lg="3"
@@ -34,7 +34,7 @@
         <b-form-input id="ingredients"></b-form-input>
       </b-form-group>
     </b-form-group>
-  </div>
+  </b-container>
 </template>
 
 <script>
