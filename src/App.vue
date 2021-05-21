@@ -3,8 +3,8 @@
     <b-container fluid>
       <!-- Navigation Bar -->
       <div>
-        <b-navbar toggleable="lg" type="dark" variant="info">
-          <!-- <b-navbar-brand>nm recipes</b-navbar-brand> -->
+        <b-navbar>
+          <b-navbar-brand>| nm recipes | </b-navbar-brand>
           <b-nav>
             <b-nav-item>
               <router-link :to="{ name: 'RecipeList' }">List</router-link>
@@ -25,8 +25,8 @@
 </template>
 
 <style lang="scss">
-// Import Noto Sans JP Regular 400 from Google fonts
-@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap");
+// Import Noto Sans JP Light 300, Bold 700 from Google fonts
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;700&display=swap");
 
 /* link */
 a:visited {

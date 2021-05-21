@@ -1,6 +1,6 @@
 // Bootstrap使って書いてみよう
 <template>
-  <b-container>
+  <b-container fluid>
     <h1>RecipeEdit</h1>
     <b-form-group
       label-cols-lg="3"
@@ -8,6 +8,7 @@
       label-size="lg"
       label-class="font-weight-bold pt-0"
       class="mb-0"
+      style="max-width: 1000px"
     >
       <b-form-group
         label="title:"
