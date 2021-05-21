@@ -9,6 +9,18 @@
       style="max-width: 1000px"
     >
       <b-form-group
+        label="id:"
+        label-for="id"
+        label-cols-sm="3"
+        label-align-sm="right"
+      >
+        <b-row>
+          <b-col lg="1">
+            <b-form-input id="id"></b-form-input>
+          </b-col>
+        </b-row>
+      </b-form-group>
+      <b-form-group
         label="title:"
         label-for="title"
         label-cols-sm="3"
@@ -16,14 +28,7 @@
       >
         <b-form-input id="title"></b-form-input>
       </b-form-group>
-      <b-form-group
-        label="id:"
-        label-for="id"
-        label-cols-sm="3"
-        label-align-sm="right"
-      >
-        <b-form-input id="id"></b-form-input>
-      </b-form-group>
+
       <b-form-group
         label="Ingredients:"
         label-for="ingredients"
@@ -57,6 +62,14 @@
         </ol>
       </b-form-group>
     </b-form-group>
+    <div>
+      <b-form-file
+        :state="Boolean(file1)"
+        placeholder="Choose a file or drop it here..."
+        drop-placeholder="Drop file here"
+      ></b-form-file>
+      <div class="mt-3">Selected file: {{ file1 ? file1.name : "" }}</div>
+    </div>
   </b-container>
 </template>
 
