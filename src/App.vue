@@ -40,11 +40,10 @@
             <b-dropdown-item href="#">Sign Out</b-dropdown-item>
           </b-nav-item-dropdown>
         </b-navbar-nav>
-      </b-collapse>
-    </b-navbar> -->
+      </b-collapse> -->
     <b-navbar toggleable="lg" type="dark" variant="info">
       <!-- <b-navbar-brand>nm recipes</b-navbar-brand> -->
-      <b-navbar-nav>
+      <b-nav>
         <b-nav-item>
           <router-link :to="{ name: 'RecipeList' }">List</router-link>
         </b-nav-item>
@@ -52,7 +51,7 @@
         <b-nav-item>
           <router-link :to="{ name: 'RecipeEdit' }">Edit</router-link>
         </b-nav-item>
-      </b-navbar-nav>
+      </b-nav>
     </b-navbar>
     <b-container fluid>
       <router-view />
@@ -77,11 +76,11 @@ h2 {
   font-size: 1.7em;
   color: #49a994;
 }
-/* .b-nav {
-  font-size: 1em;
-  color: #1d7c67;
-  text-decoration: none;
-} */
+// .b-nav {
+//   font-size: 1em;
+//   color: #1d7c67;
+//   text-decoration: none;
+// }
 img {
   /* 写真そのもののサイズ、配置の設定 */
   height: 250px;
