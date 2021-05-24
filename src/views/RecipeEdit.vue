@@ -19,6 +19,7 @@
             <b-form-input v-model="id" id="id"></b-form-input>
           </b-col>
         </b-row>
+        id: {{ id }}
       </b-form-group>
       <b-form-group
         label="title:"
@@ -28,6 +29,7 @@
       >
         <b-form-input v-model="title" id="title"></b-form-input>
       </b-form-group>
+      title: {{ title }}
 
       <b-form-group
         label="Ingredients:"
@@ -41,20 +43,22 @@
               <b-col col lg="9">
                 <label>ingredient:</label>
                 <b-form-input
-                  id="ingredient[n].ingredient"
+                  v-model="ingredients[n - 1].ingredient"
+                  id="ingredients[n-1].ingredient"
                   col="8"
                 ></b-form-input>
               </b-col>
               <b-col col lg="3">
                 <label>quantity:</label>
                 <b-form-input
-                  id="ingredient[n].quantity"
+                  v-model="ingredients[n - 1].quantity"
+                  id="ingredient[n-1].quantity"
                   col="4"
                 ></b-form-input>
               </b-col>
             </b-row>
           </ol>
-          s
+          {{ ingredients }}
         </b-form>
       </b-form-group>
       <b-form-group
@@ -63,11 +67,15 @@
         label-cols-sm="3"
         label-align-sm="right"
       >
-        <ol v-for="process in processes" :key="process.id">
-          <label>{{ process.id }}</label>
-          <b-form-input id="process"></b-form-input>
+        <ol v-for="n in numOfProcesses" :key="n">
+          <label>{{ n }}</label>
+          <b-form-input
+            v-model="processes[n - 1].process"
+            id="processes[n-1].process"
+          ></b-form-input>
         </ol>
       </b-form-group>
+      {{ processes }}
     </b-form-group>
     <div>
       <b-form-file
@@ -99,8 +107,16 @@ export default {
           ingredient: "",
           quantity: "",
         },
+        {
+          ingredient: "",
+          quantity: "",
+        },
+        {
+          ingredient: "",
+          quantity: "",
+        },
       ], // 仮置
-      numOfIngredients: 3, // 仮置
+      numOfIngredients: 5, // 仮置
       processes: [
         {
           process: "",
@@ -112,6 +128,7 @@ export default {
           process: "",
         },
       ], // 仮置
+      numOfProcesses: 3, // 仮置
       file1: "",
     };
   },
