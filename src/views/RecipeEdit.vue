@@ -16,7 +16,7 @@
       >
         <b-row>
           <b-col lg="1">
-            <b-form-input id="id"></b-form-input>
+            <b-form-input v-model="id" id="id"></b-form-input>
           </b-col>
         </b-row>
       </b-form-group>
@@ -26,7 +26,7 @@
         label-cols-sm="3"
         label-align-sm="right"
       >
-        <b-form-input id="title"></b-form-input>
+        <b-form-input v-model="title" id="title"></b-form-input>
       </b-form-group>
 
       <b-form-group
@@ -36,18 +36,25 @@
         label-align-sm="right"
       >
         <b-form inline>
-          <ol v-for="ingredient in ingredients" :key="ingredient.id">
+          <ol v-for="n in numOfIngredients" :key="n">
             <b-row>
               <b-col col lg="9">
                 <label>ingredient:</label>
-                <b-form-input id="ingredient.ingredient" col="8"></b-form-input>
+                <b-form-input
+                  id="ingredient[n].ingredient"
+                  col="8"
+                ></b-form-input>
               </b-col>
               <b-col col lg="3">
                 <label>quantity:</label>
-                <b-form-input id="ingredient.quantity" col="4"></b-form-input>
+                <b-form-input
+                  id="ingredient[n].quantity"
+                  col="4"
+                ></b-form-input>
               </b-col>
             </b-row>
           </ol>
+          s
         </b-form>
       </b-form-group>
       <b-form-group
@@ -77,7 +84,8 @@
 export default {
   data() {
     return {
-      types: ["id", "title"],
+      id: "",
+      title: "",
       ingredients: [
         {
           ingredient: "",
@@ -92,6 +100,7 @@ export default {
           quantity: "",
         },
       ], // 仮置
+      numOfIngredients: 3, // 仮置
       processes: [
         {
           process: "",
@@ -103,6 +112,7 @@ export default {
           process: "",
         },
       ], // 仮置
+      file1: "",
     };
   },
 };
