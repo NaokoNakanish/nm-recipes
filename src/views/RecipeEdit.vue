@@ -58,9 +58,13 @@
               </b-col>
             </b-row>
           </ol>
-          {{ ingredients }}
         </b-form>
       </b-form-group>
+      {{ ingredients }}
+      <div>
+        <b-button @click="addColIngredient">more ingredients</b-button>
+        <b-button @click="delColIngredient">no more ingredients</b-button>
+      </div>
       <b-form-group
         label="process:"
         label-for="process"
@@ -131,6 +135,16 @@ export default {
       numOfProcesses: 3, // 仮置
       file1: "",
     };
+  },
+  methods: {
+    addColIngredient() {
+      this.numOfIngredients++;
+      this.ingredients.push({ ingredient: "", quantity: "" });
+    },
+    delColIngredient() {
+      this.numOfIngredients--;
+      this.ingredients.pop;
+    },
   },
 };
 </script>
