@@ -7,7 +7,8 @@ import BootstrapVue from "bootstrap-vue";
 import "bootstrap/dist/css/bootstrap.css";
 import "bootstrap-vue/dist/bootstrap-vue.css";
 
-//import "./app.scss";
+// SCSSを使えない…以下コメントアウト外して回すとエラーになる。。。
+// import "./app.scss";
 
 Vue.config.productionTip = false;
 
