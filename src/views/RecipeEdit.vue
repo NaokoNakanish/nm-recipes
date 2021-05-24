@@ -62,8 +62,8 @@
       </b-form-group>
       {{ ingredients }}
       <div>
-        <b-button @click="addColIngredient">more ingredients</b-button>
-        <b-button @click="delColIngredient">no more ingredients</b-button>
+        <b-button @click="addColIngredient">+</b-button>
+        <b-button @click="delColIngredient">-</b-button>
       </div>
       <b-form-group
         label="process:"
@@ -143,7 +143,7 @@ export default {
     },
     delColIngredient() {
       this.numOfIngredients--;
-      this.ingredients.pop;
+      this.processes.pop();
     },
   },
 };
