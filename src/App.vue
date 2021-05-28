@@ -31,16 +31,14 @@
             <!-- Navigation Bar -->
             <div>
               <b-navbar>
-                <b-navbar-brand>| nm recipes | </b-navbar-brand>
-                <b-nav>
-                  <b-nav-item>
-                    <router-link :to="{ name: 'RecipeList' }">List</router-link>
-                  </b-nav-item>
-                  |
-                  <b-nav-item>
-                    <router-link :to="{ name: 'RecipeEdit' }">Edit</router-link>
-                  </b-nav-item>
-                </b-nav>
+                <b-navbar-brand>
+                  <router-link :to="{ name: 'RecipeList' }"
+                    >nm recipes
+                  </router-link></b-navbar-brand
+                >
+                <router-link :to="{ name: 'RecipeEdit' }">
+                  <b-button variant="outline-dark"> Edit </b-button>
+                </router-link>
               </b-navbar>
             </div>
             <!-- Render Every View -->

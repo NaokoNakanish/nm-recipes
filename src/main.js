@@ -18,7 +18,7 @@ import "./app.scss";
 
 Vue.config.productionTip = false;
 
-// bootstrap使う宣言 //
+// bootstrap使う宣言 new Vue...の前に入れる、order is important...//
 Vue.use(BootstrapVue);
 Vue.use(LayoutPlugin);
 Vue.use(NavPlugin);
