@@ -4,10 +4,16 @@ import router from "./router";
 import store from "./store";
 // bootstrapじゅんび //
 import BootstrapVue from "bootstrap-vue";
+import {
+  LayoutPlugin,
+  NavPlugin,
+  NavbarPlugin,
+  FormGroupPlugin,
+} from "bootstrap-vue"; // Import Bootstrap Plugins
 import "bootstrap/dist/css/bootstrap.css";
 import "bootstrap-vue/dist/bootstrap-vue.css";
 
-// SCSSを使えない…以下コメントアウト外して回すとエラーになる。。。
+// SCSS追加
 import "./app.scss";
 
 Vue.config.productionTip = false;
@@ -23,3 +29,11 @@ new Vue({
 
 // bootstrap使う宣言 //
 Vue.use(BootstrapVue);
+Vue.use(LayoutPlugin);
+Vue.use(NavPlugin);
+Vue.use(NavbarPlugin);
+Vue.use(FormGroupPlugin);
+
+// 使いたいコンポーネント宣言
+// Vue.component("b-navbar", BNavbar);
+// Vue.component("b-form-group", BFormGroup);

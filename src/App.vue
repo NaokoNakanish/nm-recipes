@@ -1,31 +1,63 @@
 <template>
-  <div id="app">
-    <b-container fluid>
-      <!-- Navigation Bar -->
-      <div>
-        <b-navbar>
-          <b-navbar-brand>| nm recipes | </b-navbar-brand>
-          <b-nav>
-            <b-nav-item>
-              <router-link :to="{ name: 'RecipeList' }">List</router-link>
-            </b-nav-item>
-            |
-            <b-nav-item>
-              <router-link :to="{ name: 'RecipeEdit' }">Edit</router-link>
-            </b-nav-item>
-          </b-nav>
-        </b-navbar>
-      </div>
-      <!-- Render Every View -->
-      <div>
-        <router-view />
-      </div>
-    </b-container>
+  <div>
+    <html lang="en">
+      <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8" />
+        <meta
+          name="viewport"
+          content="width=device-width, initial-scale=1, shrink-to-fit=no"
+        />
+        <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+
+        <title>nm-recipes</title>
+
+        <!-- Required Stylesheets -->
+        <link
+          type="text/css"
+          rel="stylesheet"
+          href="https://unpkg.com/bootstrap/dist/css/bootstrap.min.css"
+        />
+        <link
+          type="text/css"
+          rel="stylesheet"
+          href="https://unpkg.com/bootstrap-vue@latest/dist/bootstrap-vue.css"
+        />
+      </head>
+
+      <body>
+        <div id="app">
+          <b-container fluid>
+            <!-- Navigation Bar -->
+            <div>
+              <b-navbar>
+                <b-navbar-brand>| nm recipes | </b-navbar-brand>
+                <b-nav>
+                  <b-nav-item>
+                    <router-link :to="{ name: 'RecipeList' }">List</router-link>
+                  </b-nav-item>
+                  |
+                  <b-nav-item>
+                    <router-link :to="{ name: 'RecipeEdit' }">Edit</router-link>
+                  </b-nav-item>
+                </b-nav>
+              </b-navbar>
+            </div>
+            <!-- Render Every View -->
+            <div>
+              <router-view />
+            </div>
+          </b-container>
+        </div>
+      </body>
+    </html>
   </div>
 </template>
 
-<style lang="scss">
-// Import Noto Sans JP Light 300, Bold 700 from Google fonts
+<script></script>
+
+// ここじゃない？ // Import Noto Sans JP Light 300, Bold 700 from Google fonts
+<style>
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;700&display=swap");
 
 /* link */
@@ -46,11 +78,6 @@ h2 {
   font-family: "Noto Sans JP", sans-serif;
   color: #49a994;
 }
-// .b-nav {
-//   font-size: 1em;
-//   color: #1d7c67;
-//   text-decoration: none;
-// }
 img {
   /* 写真そのもののサイズ、配置の設定 */
   height: 250px;
