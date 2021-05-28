@@ -18,6 +18,13 @@ import "./app.scss";
 
 Vue.config.productionTip = false;
 
+// bootstrap使う宣言 //
+Vue.use(BootstrapVue);
+Vue.use(LayoutPlugin);
+Vue.use(NavPlugin);
+Vue.use(NavbarPlugin);
+Vue.use(FormGroupPlugin);
+
 // vuex default setting
 new Vue({
   router,
@@ -26,13 +33,6 @@ new Vue({
     return h(App);
   },
 }).$mount("#app");
-
-// bootstrap使う宣言 //
-Vue.use(BootstrapVue);
-Vue.use(LayoutPlugin);
-Vue.use(NavPlugin);
-Vue.use(NavbarPlugin);
-Vue.use(FormGroupPlugin);
 
 // 使いたいコンポーネント宣言
 // Vue.component("b-navbar", BNavbar);

@@ -56,8 +56,9 @@
 
 <script></script>
 
-// ここじゃない？ // Import Noto Sans JP Light 300, Bold 700 from Google fonts
-<style>
+<!--ここじゃない？ -->
+<!-- Import Noto Sans JP Light 300, Bold 700 from Google fonts -->
+<style lang="scss">
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;700&display=swap");
 
 /* link */
