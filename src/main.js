@@ -9,6 +9,7 @@ import {
   NavPlugin,
   NavbarPlugin,
   FormGroupPlugin,
+  CardPlugin,
 } from "bootstrap-vue"; // Import Bootstrap Plugins
 import "bootstrap/dist/css/bootstrap.css";
 import "bootstrap-vue/dist/bootstrap-vue.css";
@@ -24,6 +25,7 @@ Vue.use(LayoutPlugin);
 Vue.use(NavPlugin);
 Vue.use(NavbarPlugin);
 Vue.use(FormGroupPlugin);
+Vue.use(CardPlugin);
 
 // vuex default setting
 new Vue({
@@ -33,7 +35,3 @@ new Vue({
     return h(App);
   },
 }).$mount("#app");
-
-// 使いたいコンポーネント宣言
-// Vue.component("b-navbar", BNavbar);
-// Vue.component("b-form-group", BFormGroup);
