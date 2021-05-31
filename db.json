@@ -47,7 +47,28 @@
         {
         "id": 2,
         "title": "よだれどり",
-        "ingredients": ["たまねぎ", "にんじん", "鶏肉", "大根", "トマト缶"],
+        "ingredients": [
+            {
+            "ingredient": "玉ねぎ",
+            "quantity": "3個"
+            },
+            {
+            "ingredient": "にんじん",
+            "quantity": "2本"
+            },
+            {
+            "ingredient": "鶏もも肉",
+            "quantity": "2枚"
+            },
+            {
+            "ingredient": "大根",
+            "quantity": "1/3本"
+            },
+            {
+            "ingredient": "トマト缶",
+            "quantity": "半分"
+            }
+        ],
         "processes": [
             {
                 "order": 1,
