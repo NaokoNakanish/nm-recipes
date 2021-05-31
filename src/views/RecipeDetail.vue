@@ -1,21 +1,39 @@
 <template>
   <div>
-    <b-container fluid>
-      <h1>#{{ recipe.id }} {{ recipe.title }}</h1>
-      <img :src="recipe.imgSrc" alt="curry photo" />
+    <b-container>
+      <span>#{{ recipe.id }}</span>
+      <h1>{{ recipe.title }}</h1>
+      <b-img :src="recipe.imgSrc" alt="no image" width="1000px" />
 
-      <h2>ingredient🍅</h2>
-      <ul>
-        <li v-for="ingredient in recipe.ingredients" :key="ingredient">
-          {{ ingredient.ingredient }} ....{{ ingredient.quantity }}
-        </li>
-      </ul>
-      <h2>How to Make🍳</h2>
-      <ol>
-        <li v-for="process in recipe.processes" :key="process.order">
-          {{ process.do }}
-        </li>
-      </ol>
+      <b-card style="width: 1000px">
+        <template #header>
+          <h2 class="mb-0">ingredient</h2>
+        </template>
+        <b-card-body>
+          <b-list-group
+            v-for="ingredient in recipe.ingredients"
+            :key="ingredient"
+          >
+            <b-list-group-item>
+              {{ ingredient.ingredient }} ....{{ ingredient.quantity }}
+            </b-list-group-item>
+          </b-list-group>
+        </b-card-body>
+      </b-card>
+
+      <b-card style="width: 1000px">
+        <template #header>
+          <h2 class="mb-0">How to Make</h2>
+        </template>
+        <b-card-body>
+          <b-list-group
+            v-for="process in recipe.processes"
+            :key="process.order"
+          >
+            <b-list-group-item> {{ process.do }}</b-list-group-item>
+          </b-list-group>
+        </b-card-body>
+      </b-card>
     </b-container>
   </div>
 </template>

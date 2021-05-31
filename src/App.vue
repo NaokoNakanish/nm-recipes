@@ -77,9 +77,4 @@ h2 {
   font-family: "Noto Sans JP", sans-serif;
   color: #49a994;
 }
-img {
-  /* 写真そのもののサイズ、配置の設定 */
-  height: 250px;
-  float: center;
-}
 </style>
