@@ -2,7 +2,7 @@
   <div>
     <b-container fluid>
       <h1>#{{ recipe.id }} {{ recipe.title }}</h1>
-      <img src="@/assets/PXL_20210327_051520012.jpg" alt="curry photo" />
+      <img :src="recipe.imgSrc" alt="curry photo" />
 
       <h2>ingredient🍅</h2>
       <ul>
