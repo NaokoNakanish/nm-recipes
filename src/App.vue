@@ -36,6 +36,11 @@
                     >nm recipes
                   </router-link></b-navbar-brand
                 >
+                <div v-for="(button, index) in buttons" :key="index">
+                  <b-button class="mr-1" size="sm" variant="primary">
+                    {{ button.caption }}
+                  </b-button>
+                </div>
                 <router-link :to="{ name: 'RecipeEdit' }">
                   <b-button variant="outline-dark"> Edit </b-button>
                 </router-link>
@@ -52,7 +57,24 @@
   </div>
 </template>
 
-<script></script>
+<script>
+export default {
+  data() {
+    return {
+      buttons: [
+        // categories
+        { caption: "Japanese", state: false },
+        { caption: "Chinese", state: false },
+        { caption: "Italian", state: false },
+        { caption: "French", state: false },
+        { caption: "Indian", state: false },
+        { caption: "Sweets", state: false },
+        { caption: "Breads", state: false },
+      ],
+    };
+  },
+};
+</script>
 
 <!--ここじゃない？ -->
 <!-- Import Noto Sans JP Light 300, Bold 700 from Google fonts -->
