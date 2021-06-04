@@ -41,8 +41,8 @@
                     {{ button.caption }}
                   </b-button>
                 </div>
-                <router-link :to="{ name: 'RecipeEdit' }">
-                  <b-button variant="outline-dark"> Edit </b-button>
+                <router-link :to="{ name: 'RecipeEdit' }" :position="fixed">
+                  <b-button variant="outline-dark"> ADD NEW RECIPE </b-button>
                 </router-link>
               </b-navbar>
             </div>
