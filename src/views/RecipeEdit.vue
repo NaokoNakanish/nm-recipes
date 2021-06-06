@@ -7,6 +7,7 @@
       label-class="font-weight-bold pt-0"
       class="mb-0"
       style="max-width: 1000px"
+      @submit.prevent="createRecipe"
     >
       <b-form-group
         label="id:"
@@ -89,6 +90,7 @@
       ></b-form-file>
       <div class="mt-3">Selected file: {{ file1 ? file1.name : "" }}</div>
     </div>
+    <input type="submit" value="submit" />
   </b-container>
 </template>
 
@@ -144,6 +146,9 @@ export default {
     delColIngredient() {
       this.numOfIngredients--;
       this.processes.pop();
+    },
+    createRecipe() {
+      this.$store.dispatch("createRecipe", this.event);
     },
   },
 };

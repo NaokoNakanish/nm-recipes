@@ -21,4 +21,8 @@ export default {
     // idごとに単体で受け取れると便利なので、データセットには基本idを振りましょうね
     return apiClient.get("/recipes/" + id);
   },
+  // 新しいレシピを作るとき用
+  postRecipe(recipe) {
+    return apiClient.post("/recipes", recipe);
+  },
 };

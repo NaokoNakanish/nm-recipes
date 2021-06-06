@@ -20,6 +20,10 @@ export default new Vuex.Store({
     SET_RECIPE(state, recipe) {
       state.recipe = recipe;
     },
+    // Recipe.Editで書いた新しいレシピをdb.jsonのデータに追加する
+    ADD_RECIPE(state, recipe) {
+      state.recipe.push(recipe);
+    },
   },
   actions: {
     // 全部のレシピデータがさっと持ってくる・RecipeList.vueで利用
@@ -53,6 +57,11 @@ export default new Vuex.Store({
             );
           });
       }
+    },
+    // Axios経由で、db.jsonのレシピデータを持ってきて、新しいレシピを追加する
+    createRecipe({ commit }, recipe) {
+      RecipeService.postRecipe(recipe);
+      commit("ADD_RECIPE", recipe);
     },
   },
   getters: {
