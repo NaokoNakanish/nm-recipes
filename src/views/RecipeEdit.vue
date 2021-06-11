@@ -10,27 +10,14 @@
         style="max-width: 1000px"
       >
         <b-form-group
-          label="id:"
-          label-for="id"
-          label-cols-sm="3"
-          label-align-sm="right"
-        >
-          <b-row>
-            <b-col lg="1">
-              <b-form-input v-model="id" id="id"></b-form-input>
-            </b-col>
-          </b-row>
-          id: {{ id }}
-        </b-form-group>
-        <b-form-group
           label="title:"
           label-for="title"
           label-cols-sm="3"
           label-align-sm="right"
         >
-          <b-form-input v-model="title" id="title"></b-form-input>
+          <b-form-input v-model="recipe.title" id="title"></b-form-input>
         </b-form-group>
-        title: {{ title }}
+        title: {{ recipe.title }}
 
         <b-form-group
           label="Ingredients:"
@@ -44,7 +31,7 @@
                 <b-col col lg="9">
                   <label>ingredient:</label>
                   <b-form-input
-                    v-model="ingredients[n - 1].ingredient"
+                    v-model="recipe.ingredients[n - 1].ingredient"
                     id="ingredients[n-1].ingredient"
                     col="8"
                   ></b-form-input>
@@ -52,7 +39,7 @@
                 <b-col col lg="3">
                   <label>quantity:</label>
                   <b-form-input
-                    v-model="ingredients[n - 1].quantity"
+                    v-model="recipe.ingredients[n - 1].quantity"
                     id="ingredient[n-1].quantity"
                     col="4"
                   ></b-form-input>
@@ -61,7 +48,7 @@
             </ol>
           </b-form>
         </b-form-group>
-        {{ ingredients }}
+        {{ recipe.ingredients }}
         <div>
           <b-button @click="addColIngredient">+</b-button>
           <b-button @click="delColIngredient">-</b-button>
@@ -75,23 +62,25 @@
           <ol v-for="n in numOfProcesses" :key="n">
             <label>{{ n }}</label>
             <b-form-input
-              v-model="processes[n - 1].process"
+              v-model="recipe.processes[n - 1].process"
               id="processes[n-1].process"
             ></b-form-input>
           </ol>
         </b-form-group>
-        {{ processes }}
+        {{ recipe.processes }}
         <div>
           <b-button @click="addColProcess">+</b-button>
           <b-button @click="delColProcess">-</b-button>
         </div>
         <div>
           <b-form-file
-            :state="Boolean(file1)"
+            :state="Boolean(recipe.file1)"
             placeholder="Choose a file or drop it here..."
             drop-placeholder="Drop file here"
           ></b-form-file>
-          <div class="mt-3">Selected file: {{ file1 ? file1.name : "" }}</div>
+          <div class="mt-3">
+            Selected file: {{ recipe.file1 ? recipe.file1.name : "" }}
+          </div>
         </div>
         <b-button type="submit">submit</b-button>
       </b-form-group>
@@ -103,62 +92,68 @@
 export default {
   data() {
     return {
-      id: "",
-      title: "",
-      ingredients: [
-        {
-          ingredient: "",
-          quantity: "",
-        },
-        {
-          ingredient: "",
-          quantity: "",
-        },
-        {
-          ingredient: "",
-          quantity: "",
-        },
-        {
-          ingredient: "",
-          quantity: "",
-        },
-        {
-          ingredient: "",
-          quantity: "",
-        },
-      ], // 仮置
+      recipe: this.createFreshRecipe(),
       numOfIngredients: 5, // 仮置
-      processes: [
-        {
-          process: "",
-        },
-        {
-          process: "",
-        },
-        {
-          process: "",
-        },
-      ], // 仮置
       numOfProcesses: 3, // 仮置
-      file1: "",
     };
   },
   methods: {
+    createFreshRecipe() {
+      const id = this.$store.state.recipes.length;
+      return {
+        id: id,
+        title: "",
+        ingredients: [
+          {
+            ingredient: "",
+            quantity: "",
+          },
+          {
+            ingredient: "",
+            quantity: "",
+          },
+          {
+            ingredient: "",
+            quantity: "",
+          },
+          {
+            ingredient: "",
+            quantity: "",
+          },
+          {
+            ingredient: "",
+            quantity: "",
+          },
+        ], // 仮置
+        processes: [
+          {
+            process: "",
+          },
+          {
+            process: "",
+          },
+          {
+            process: "",
+          },
+        ], // 仮置
+        file1: "",
+      };
+    },
     addColIngredient() {
       this.numOfIngredients++;
-      this.ingredients.push({ ingredient: "", quantity: "" });
+      this.recipe.ingredients.push({ ingredient: "", quantity: "" });
     },
     delColIngredient() {
       this.numOfIngredients--;
-      this.ingredients.pop();
+      this.recipe.ingredients.pop();
     },
     addColProcess() {
       this.numOfProcesses++;
-      this.processes.push({ process: "" });
+      this.recipe.processes.push({ process: "" });
     },
     delColProcess() {
       this.numOfProcesses--;
-      this.processes.pop();
+      this.recipe.processes.pop();
     },
     createRecipe() {
       this.$store.dispatch("createRecipe", this.recipe);
