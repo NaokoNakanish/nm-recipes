@@ -22,7 +22,7 @@ export default new Vuex.Store({
     },
     // Recipe.Editで書いた新しいレシピをdb.jsonのデータに追加する
     ADD_RECIPE(state, recipe) {
-      state.recipe.push(recipe);
+      state.recipes.push(recipe);
     },
   },
   actions: {
