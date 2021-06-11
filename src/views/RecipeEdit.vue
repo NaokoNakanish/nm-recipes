@@ -83,6 +83,10 @@
       {{ processes }}
     </b-form-group>
     <div>
+      <b-button @click="addColProcess">+</b-button>
+      <b-button @click="delColProcess">-</b-button>
+    </div>
+    <div>
       <b-form-file
         :state="Boolean(file1)"
         placeholder="Choose a file or drop it here..."
@@ -145,6 +149,14 @@ export default {
     },
     delColIngredient() {
       this.numOfIngredients--;
+      this.ingredients.pop();
+    },
+    addColProcess() {
+      this.numOfProcesses++;
+      this.processes.push({ process: "" });
+    },
+    delColProcess() {
+      this.numOfProcesses--;
       this.processes.pop();
     },
     createRecipe() {
