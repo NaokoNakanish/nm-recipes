@@ -3,7 +3,7 @@
     <b-container>
       <span>#{{ recipe.id }}</span>
       <h1>{{ recipe.title }}</h1>
-      <b-img :src="recipe.imgSrc" alt="no image" width="1000px" />
+      <b-img :src="recipe.imgSrc" alt="no image registered" width="1000px" />
 
       <b-card style="width: 1000px">
         <template #header>
