@@ -99,9 +99,7 @@ export default {
   },
   methods: {
     createFreshRecipe() {
-      const id = this.$store.state.recipes.length;
       return {
-        id: id,
         title: "",
         ingredients: [
           {
