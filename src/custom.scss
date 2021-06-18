@@ -1,6 +1,6 @@
 // Define your variable overrides here
 $enable-shadows: false;
-$enable-gradients: true;
+$enable-gradients: false;
 $grid-breakpoints: (
   xs: 0,
   sm: 456px,
@@ -10,19 +10,18 @@ $grid-breakpoints: (
 );
 $bv-enable-table-stacked: false;
 
-$theme-colors: (
-  "primary": #d6c428,
-  "Secondary": #472f1a,
-);
+$secondary: #472f1a;
+$primary: #d6c428;
 
 // Include Bootstrap and BootstrapVue SCSS files
-@import "~bootstrap/scss/bootstrap.scss";
-@import "~bootstrap-vue/src/index.scss";
-
+// @import "bootstrap/scss/bootstrap.scss"; // kinda works/
+// @import "bootstrap-vue/src/index.scss"; // kinda works/
+@import "../node_modules/bootstrap/scss/bootstrap";
+@import "../node_modules/bootstrap-vue/src/index.scss";
 // General style overrides and custom classes
-body {
-  margin: 0;
-}
+// body {
+//   margin: 0;
+// }
 
 .my-widget {
   color: var(--danger);

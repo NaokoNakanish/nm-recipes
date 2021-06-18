@@ -13,7 +13,7 @@
         <title>nm-recipes</title>
 
         <!-- Required Stylesheets -->
-        <link
+        <!-- <link
           type="text/css"
           rel="stylesheet"
           href="https://unpkg.com/bootstrap/dist/css/bootstrap.min.css"
@@ -22,7 +22,7 @@
           type="text/css"
           rel="stylesheet"
           href="https://unpkg.com/bootstrap-vue@latest/dist/bootstrap-vue.css"
-        />
+        /> -->
       </head>
 
       <body>
@@ -47,7 +47,9 @@
                   right="50px"
                   bottom="50px"
                 >
-                  <b-button variant="outline-dark"> ADD NEW RECIPE </b-button>
+                  <b-button variant="outline-primary">
+                    ADD NEW RECIPE
+                  </b-button>
                 </router-link>
               </b-navbar>
             </div>
