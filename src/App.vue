@@ -47,7 +47,7 @@
                   right="50px"
                   bottom="50px"
                 >
-                  <b-button variant="outline-primary">
+                  <b-button variant="outline-secondary">
                     ADD NEW RECIPE
                   </b-button>
                 </router-link>
