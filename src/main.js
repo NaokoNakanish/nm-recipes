@@ -4,6 +4,12 @@ import router from "./router";
 import store from "./store";
 // bootstrapじゅんび //
 import BootstrapVue from "bootstrap-vue";
+// import "bootstrap/dist/css/bootstrap.css";
+// import "bootstrap-vue/dist/bootstrap-vue.css";
+
+// SCSS追加
+import "./custom.scss";
+
 import {
   LayoutPlugin,
   NavPlugin,
@@ -11,11 +17,6 @@ import {
   FormGroupPlugin,
   CardPlugin,
 } from "bootstrap-vue"; // Import Bootstrap Plugins
-import "bootstrap/dist/css/bootstrap.css";
-import "bootstrap-vue/dist/bootstrap-vue.css";
-
-// SCSS追加
-import "./app.scss";
 
 Vue.config.productionTip = false;
 

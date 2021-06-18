@@ -11,7 +11,7 @@
       >
         <b-card-body>
           <b-card-title>{{ recipe.title }}</b-card-title>
-          <b-card-subtile>{{ recipe.category }}</b-card-subtile>
+          <b-card-subtitle>{{ recipe.category }}</b-card-subtitle>
           <b-card-text
             >Updated: {{ recipe.editDate }} by {{ recipe.editor }}
           </b-card-text>
@@ -30,7 +30,7 @@ export default {
       if (this.recipe.imgSrc) {
         return this.recipe.imgSrc;
       } else {
-        return "https://lh3.googleusercontent.com/sFCWCeIXLyRWpc8TepilggZWqLAYOoHzAPUnHCRdLjRdsQrS37ih0t5R2eMKvQxlxOSVasLRmNY3zisQutLWANMErjSBMp9Avh8pEHWGYMV-9RwaBLae06sfyOEqzpG-7uGz2M0wDTUlDhom6z-qwlgST2UVjfptjSO0QVMpmdsyYgbTeFv4-lOaXZOI58EEmGw0qleQXCDL6kKI2FDQ1214OviUWED-iLuE-ylsfBR1_TdnecKalwly0_mchbwr_-iYxDPGDzMaYakdCb6Al3LdYpaFo57jycDrsjCRJTjFcFc9tDZuLLjfoVFhVxmuFwM2q9dze3X2h7P9DTjr_cHC5uq29u8I4_e61x6j_aLwV3lO33j1p4DLDQ8oVczj2iIIJOzSWvXgHK0wDCSjUAvOf8kWJjIVXdwR98Cnx62C_kumiZVhHhDFbnM4USQHQJnWcP3r4Yy7AZrpe9BiLwMEd7pzpKbj66vmOWhGxYS744gPOKIPgjVnLaq7u97K6uTJ6mMuhyxHFWvjorWzIJfzXbwXFornEr4jdkepTOLEvsUp6WOqIl9KayFToIGeBW8nlmSrwzw1Wi47APdE-gEtc4lEzMI9MVO9Q-ALjhl0RUgO2fScd2-zXsh06bo-x5cFZN5Ss4lv0wvtgwn5mEuJUhZrOUxo6DKArhTlUk5SPOZ_b7_HKOxEcqNuLFVh2rY1NPVSPlEVbS-gG-ZJoqXNPA=w1704-h960-no?authuser=0";
+        return "https://lh3.googleusercontent.com/jXPK7GuDv7cKCrfWvR6mS5WYUcOValNWo_Zcga7wGNRVE9stWM2JQC3HcsvfCQEfUhIoqn772MOQ7_EsWFGE8KSS7yBty7zrfz0o8kK09RrSGBGJtsnSZDTmDkX_SU5hCI2XYqU6QX1i5G36mm8aLCyjA-18cw_XJgeUPRJ_BgqJXtIjFx955J2KZRxv5ByohfYvlXao_bic-WqQa2I99JE2zVoAekKPYKtLXk6bxfyGVwHwqhpDPe1b3HcuT11CY2Wi-C8u0Rwkrc2Czsi6RjZqIZAck81TR0LzHJ65lMqL0OWiYJQbGNj2Mt7IoCoG_mIaOXul-FsXhlEhR3BeMDWCdE5JZaFd4QNa8siOx37G7fX5mYBBoWmNKzyKgYyh1rF3WomTe-kiFwpx3YDtYx-UG2CWDs5lPufmEMzDj-EqacVO7XlEss1U0JCCzZtDtaLi_O71XYMdTYmrW49TPYGqKnMWD1NphLibpDWsu--fRrthV5SG7psUnRbmzaqhPBuzH4UTf4G1Iu7QzQL7OySM9AtAemND12d4z-mLfnq0R6WAbS4DurwE_S-Ccqz4sQ09z0YPNdiQAeiPFyCrkawj5pK9trP0Ev_qea05CVGUBi0fMqV9GGcD3VOwM9HLhr9UKqSWG2bA6RYBExamxZd4tjKloS0BZlpvmkHYK2qUZSRUSx6RPe3dcp60Lc-2OgEAKiYSRKW7eS_6PGh2nT2BEw=w1698-h956-no?authuser=0";
       }
     },
   },
