@@ -82,28 +82,3 @@ export default {
   },
 };
 </script>
-
-<!--ここじゃない？ -->
-<!-- Import Noto Sans JP Light 300, Bold 700 from Google fonts -->
-<style lang="scss">
-@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;700&display=swap");
-
-/* link */
-a:visited {
-  color: #06231c;
-}
-a:hover {
-  color: #49a994;
-}
-/* 見出し文字 */
-h1 {
-  font-size: 3em;
-  font-family: "Noto Sans JP", sans-serif;
-  color: #49a994;
-}
-h2 {
-  font-size: 1.7em;
-  font-family: "Noto Sans JP", sans-serif;
-  color: #49a994;
-}
-</style>

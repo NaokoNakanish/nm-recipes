@@ -14,6 +14,14 @@ $bv-enable-table-stacked: false;
 $primary: #d6c428;
 $secondary: #472f1a;
 
+// stylelint-disable value-keyword-case
+@import url("https://fonts.googleapis.com/css2?family=Noto+Serif+JP&display=swap");
+$font-family-sans-serif: "Noto Serif JP", "Liberation Sans", sans-serif,
+  "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
+$font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas,
+  "Liberation Mono", "Courier New", monospace !default;
+$font-family-base: $font-family-sans-serif !default;
+
 // Include Bootstrap and BootstrapVue SCSS files
 // @import "bootstrap/scss/bootstrap.scss"; // kinda works/
 // @import "bootstrap-vue/src/index.scss"; // kinda works/
