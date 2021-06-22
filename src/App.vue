@@ -31,11 +31,11 @@
             <!-- Navigation Bar -->
             <div>
               <b-navbar>
-                <b-navbar-brand>
+                <b-navbar-brand style="font-family: font-family-handwriting">
                   <router-link :to="{ name: 'RecipeList' }"
                     >nm recipes
-                  </router-link></b-navbar-brand
-                >
+                  </router-link>
+                </b-navbar-brand>
                 <div v-for="(button, index) in buttons" :key="index">
                   <b-button class="mr-1" size="sm" variant="primary">
                     {{ button.caption }}
@@ -82,3 +82,7 @@ export default {
   },
 };
 </script>
+
+<style scoped>
+@import url("https://fonts.googleapis.com/css2?family=Zeyada&display=swap");
+</style>
