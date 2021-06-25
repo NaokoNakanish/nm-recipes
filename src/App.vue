@@ -31,7 +31,7 @@
             <!-- Navigation Bar -->
             <div>
               <b-navbar>
-                <b-navbar-brand style="font-family: font-family-handwriting">
+                <b-navbar-brand class="title">
                   <router-link :to="{ name: 'RecipeList' }"
                     >nm recipes
                   </router-link>
@@ -85,4 +85,10 @@ export default {
 
 <style scoped>
 @import url("https://fonts.googleapis.com/css2?family=Zeyada&display=swap");
+
+/* Font for title */
+.title {
+  font-family: "Zeyada", cursive;
+  font-size: 3rem;
+}
 </style>
